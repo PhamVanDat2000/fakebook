@@ -1,6 +1,7 @@
 const express = require("express")
 const route = express.Router()
 const Post = require('../models/post')
+const User = require('../models/user')
 // create post
 route.post('/create', async (req, res) => {
     const newPost = await new Post(req.body)
@@ -50,21 +51,28 @@ route.get("/:id", async (req, res) => {
         const post = await Post.findById(req.params.id)
         res.status(200).json(post)
     } catch (error) {
-        ros.status(500).json(error)
+        res.status(500).json(error)
     }
 })
+
 // get timeline posts
-route.get("/:id/timeline", async (req, res) => {
+route.get("/timeline/all", async (req, res) => {
     try {
-        const allPost = await Post.find({ userID: req.params.id })
-        res.status(200).json(allPost)
+        const currentUser = await User.findById(req.body.userId)
+        const userPosts = await Post.find({ userId: currentUser.id })
+        const friendsPosts = await Promise.all(
+            currentUser.followings.map((friendId) => {
+                return Post.find({ userId: friendId })
+            })
+        )
+        const allPost = userPosts.concat(...friendsPosts)
+        res.status(200).json(userPosts.concat(...friendsPosts))
     } catch (error) {
-        ros.status(500).json(error)
+        res.status(500).json(error)
     }
 })
 
 // like and dislike
-
 route.put("/:id/like", async (req, res) => {
     try {
         const post = await Post.findById(req.params.id)
@@ -74,7 +82,7 @@ route.put("/:id/like", async (req, res) => {
         } else {
             await post.updateOne({ $pull: { likes: req.body.userId } })
             res.status(200).json("Unlike success")
-        }       
+        }
     } catch (error) {
         res.status(500).json(error)
     }
