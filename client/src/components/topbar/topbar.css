@@ -1,4 +1,7 @@
 .topbarContainer {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   height: 50px;
   width: 100%;
   display: flex;
@@ -140,7 +143,7 @@
 .topbarAvata:hover{
   background-color: #f0f2f5;
 }
-.avt-user{
+.avt-topbar{
   margin-right: 6px;
   width: 32px;
   height: 32px;

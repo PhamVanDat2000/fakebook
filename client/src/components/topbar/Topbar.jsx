@@ -25,7 +25,7 @@ export default function Topbar() {
             </div>
             <div className="topbarRight">
                 <div className="topbarAvata">
-                    <img src="/assets/person/avt-01.jpg" alt="avata user" className="avt-user" />
+                    <img src="/assets/person/avt-01.jpg" alt="avata user" className="avt-topbar" />
                     <span className="name-user">Phạm Văn Đạt</span>
                 </div>
                 <div className="topbarIconItem">

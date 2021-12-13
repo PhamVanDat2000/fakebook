@@ -1,4 +1,5 @@
 .newfeed {
   flex: 8;
-  background-color: blue;
+  background-color: #fff;
+  height: 1000px;
 }

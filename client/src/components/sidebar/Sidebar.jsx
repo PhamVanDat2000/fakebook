@@ -19,7 +19,7 @@ export default function Sidebar() {
             <div className="wrapsidebarList">
                 <ul className="sidebarList">
                     <li className="sidebarItem">
-                        <img src="/assets/person/avt-01.jpg" alt="avata user" className="avt-user" />
+                        <img src="/assets/person/avt-01.jpg" alt="avata user" className="avt-sidebar" />
                         <span className="name-user">Phạm Văn Đạt</span>
                     </li>
                     <li className="sidebarItem">
@@ -58,7 +58,7 @@ export default function Sidebar() {
                         <BsFillCaretDownFill style={{ color: '#000' }} className="sidebarIcon" />
                         <span>Xem thêm</span>
                     </li>
-                    <hr />
+                    <hr className="sidebarHr"  />
                     <p className="sidebarText">Lối tắt của bạn</p>
                     {
                         groupArray.map((group, idx) => {
