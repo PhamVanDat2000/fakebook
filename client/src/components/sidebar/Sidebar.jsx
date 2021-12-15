@@ -58,7 +58,7 @@ export default function Sidebar() {
                         <BsFillCaretDownFill style={{ color: '#000' }} className="sidebarIcon" />
                         <span>Xem thêm</span>
                     </li>
-                    <hr className="sidebarHr"  />
+                    <hr className="sidebarHr" />
                     <p className="sidebarText">Lối tắt của bạn</p>
                     {
                         groupArray.map((group, idx) => {
@@ -74,6 +74,7 @@ export default function Sidebar() {
                         <BsFillCaretDownFill style={{ color: '#000' }} className="sidebarIcon" />
                         <span>Xem thêm</span>
                     </li>
+                    <hr className="sidebarHr" />
                 </ul>
 
             </div>

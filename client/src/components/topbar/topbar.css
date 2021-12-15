@@ -1,5 +1,6 @@
 .topbarContainer {
   position: sticky;
+  background-color: #fff;
   top: 0;
   z-index: 100;
   height: 50px;
@@ -46,14 +47,15 @@
 }
 
 .searchIcon {
-  font-size: 20px !important;
+  font-size: 20px;
   margin-left: 10px;
 }
 
 .searchInput {
   border: none;
   background-color: #f0f2f5;
-  font-size: 16px;
+  font-size: 12px;
+	font-weight: 400;
 }
 
 .searchInput:focus {
@@ -100,7 +102,8 @@
   color: #2374e1;
 }
 
-.topbarIconItem,.topbarAvata {
+.topbarIconItem,
+.topbarAvata {
   width: 40px;
   height: 40px;
   cursor: pointer;
@@ -116,9 +119,11 @@
 .topbarIconItem:hover {
   background-color: #d8dadf;
 }
-.topbarIcon-2{
+
+.topbarIcon-2 {
   font-size: 20px;
 }
+
 .iconBadge {
   width: 15px;
   height: 15px;
@@ -133,17 +138,20 @@
   right: -1px;
   top: -1px;
 }
-.topbarAvata{
+
+.topbarAvata {
   background-color: #fff;
   height: 36px;
   width: auto;
   justify-content: flex-start;
   padding: 2px 3px;
 }
-.topbarAvata:hover{
+
+.topbarAvata:hover {
   background-color: #f0f2f5;
 }
-.avt-topbar{
+
+.avt-topbar {
   margin-right: 6px;
   width: 32px;
   height: 32px;

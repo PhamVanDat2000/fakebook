@@ -1,9 +1,8 @@
 .rightbar {
   flex: 3;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 50px);
   position: sticky;
   overflow-y: scroll;
-  background-color: #f0f2f5;
   margin-right: 6px;
 }
 
@@ -53,8 +52,8 @@
 
 .avt-user {
   margin-right: 16px;
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   border-radius: 30px;
   object-fit: cover;
 }
@@ -115,7 +114,6 @@
 .friendsItem {
   display: flex;
   align-items: center;
-  background-color: #f0f2f5;
   height: 48px;
   width: auto;
   justify-content: flex-start;
@@ -123,6 +121,10 @@
   cursor: pointer;
   border-radius: 10px;
   position: relative;
+}
+
+.friendsItem:hover {
+  background-color: #e4e6e9;
 }
 
 .onlStatus {
@@ -135,8 +137,4 @@
   border-radius: 50%;
   right: 10px;
   top: 20px;
-}
-
-.friendsItem:hover {
-  background-color: #e4e6e9;
 }

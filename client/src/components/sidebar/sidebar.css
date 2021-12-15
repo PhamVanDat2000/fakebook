@@ -1,9 +1,8 @@
 .sidebar {
   flex: 3;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 50px);
   position: sticky;
   overflow-y: scroll;
-  background-color: #f0f2f5;
 }
 
 ::-webkit-scrollbar {
@@ -30,7 +29,6 @@
 .sidebarItem {
   display: flex;
   align-items: center;
-  background-color: #f0f2f5;
   height: 40px;
   width: auto;
   justify-content: flex-start;
@@ -41,10 +39,6 @@
 
 .sidebarItem:hover {
   background-color: #e4e6e9;
-}
-
-.topbarAvata:hover {
-  background-color: #f0f2f5;
 }
 
 .avt-sidebar {
