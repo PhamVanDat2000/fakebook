@@ -8,6 +8,10 @@ export default function Newfeed() {
 			<div className="content">
 				<Share/>
 				<Post/>
+				<Post/>
+				<Post/>
+				<Post/>
+				<Post/>
 			</div>
 		</div>
 	)

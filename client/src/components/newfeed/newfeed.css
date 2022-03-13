@@ -1,11 +1,5 @@
 .newfeed {
-  flex: 8;
   display: flex;
   justify-content: center;
   flex-direction: row;
-  height: 1000px;
-
-}
-.content{
-  width: 60%;
 }

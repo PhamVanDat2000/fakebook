@@ -23,6 +23,10 @@ export default function Share() {
 						<FaRegSmileWink className='flingIcon'/>
 						<span>Cảm xúc</span>
 					</div>
+					<div className="wrapIcon">
+						<FaRegSmileWink className='flingIcon'/>
+						<span>Đăng bài</span>
+					</div>
 				</div>
 			</div>
 		</div >

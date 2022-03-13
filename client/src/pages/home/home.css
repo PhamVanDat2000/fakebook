@@ -1,4 +1,15 @@
+.container {
+  background-color: #f0f2f5;
+}
+
 .homeContainer {
   display: flex;
   width: 100%;
+}
+
+.homeNewfeed {
+	box-sizing: border-box;
+	padding: 0 240px;
+
+  flex: 6;
 }

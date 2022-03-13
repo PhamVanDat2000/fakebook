@@ -1,7 +1,17 @@
 .postContain {
   margin-top: 16px;
-  background-position-x: initial;
-  background-position-y: initial;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  color: #fac64f;
+}
+
+::-webkit-scrollbar-track {
+  color: #65676b;
 }
 
 .postBox {
@@ -59,6 +69,7 @@
 .inforReact {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .numberLikeShare {
@@ -67,17 +78,10 @@
 }
 
 .smLikeIcon {
-  font-size: 18px;
+  font-size: 22px;
   cursor: pointer;
-  margin: 4px 0;
+  margin: 4px 2px 4px 0;
   color: #119af6;
-}
-
-.smHaHaIcon {
-  font-size: 18px;
-  cursor: pointer;
-  margin: 4px 4px 4px 0;
-  color: #fac64f;
 }
 
 .numberReact {
@@ -111,18 +115,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 4px;
+  border-radius: 8px;
   margin: 2px 2px;
   cursor: pointer;
   color: #606266;
 }
-
+.activeLike{
+	color: #119af6;
+}
 .btnPost:hover {
   background-color: #f0f2f5;
 }
 
 .btnPost span {
-	margin-left: 4px;
+  margin-left: 4px;
 }
 
 .iconBtn {
