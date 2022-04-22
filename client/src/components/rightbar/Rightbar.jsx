@@ -8,33 +8,33 @@ import { FaUserFriends } from 'react-icons/fa';
 export default function Rightbar(props) {
 	const { user } = props
 	const friendsArray = [
-		{ name: "Trương Thị Thu Thảo ", url: "/assets/person/avt-06.jpg" },
-		{ name: "Thúy Ngân", url: "/assets/person/avt-05.jpg" },
-		{ name: "Ngọc Diễm", url: "/assets/person/avt-04.jpg" },
+		{ name: "Pham Van Dat ", url: "/assets/person/avt-06.jpg" },
+		{ name: "Pham pham", url: "/assets/person/avt-05.jpg" },
+		{ name: "Hoang Nam", url: "/assets/person/avt-04.jpg" },
 		{ name: "Hoàng Đức", url: "/assets/person/avt-03.jpg" },
 		{ name: "Trương Thủy", url: "/assets/person/avt-02.jpg" },
 		{ name: "Minh Thư", url: "/assets/person/avt-01.jpg" },
-		{ name: "Thu Thảo", url: "/assets/person/avt-06.jpg" },
-		{ name: "Thúy Ngân", url: "/assets/person/avt-05.jpg" },
-		{ name: "Ngọc Diễm", url: "/assets/person/avt-04.jpg" },
+		{ name: "Van Hung", url: "/assets/person/avt-06.jpg" },
+		{ name: "Pham pham", url: "/assets/person/avt-05.jpg" },
+		{ name: "Hoang Nam", url: "/assets/person/avt-04.jpg" },
 		{ name: "Hoàng Đức", url: "/assets/person/avt-03.jpg" },
 		{ name: "Trương Thủy", url: "/assets/person/avt-02.jpg" },
 		{ name: "Minh Thư", url: "/assets/person/avt-01.jpg" },
-		{ name: "Thu Thảo", url: "/assets/person/avt-06.jpg" },
-		{ name: "Thúy Ngân", url: "/assets/person/avt-05.jpg" },
-		{ name: "Ngọc Diễm", url: "/assets/person/avt-04.jpg" },
+		{ name: "Van Hung", url: "/assets/person/avt-06.jpg" },
+		{ name: "Pham pham", url: "/assets/person/avt-05.jpg" },
+		{ name: "Hoang Nam", url: "/assets/person/avt-04.jpg" },
 		{ name: "Hoàng Đức", url: "/assets/person/avt-03.jpg" },
 		{ name: "Trương Thủy", url: "/assets/person/avt-02.jpg" },
 		{ name: "Minh Thư", url: "/assets/person/avt-01.jpg" },
-		{ name: "Thu Thảo", url: "/assets/person/avt-06.jpg" },
-		{ name: "Thúy Ngân", url: "/assets/person/avt-05.jpg" },
-		{ name: "Ngọc Diễm", url: "/assets/person/avt-04.jpg" },
+		{ name: "Van Hung", url: "/assets/person/avt-06.jpg" },
+		{ name: "Pham pham", url: "/assets/person/avt-05.jpg" },
+		{ name: "Hoang Nam", url: "/assets/person/avt-04.jpg" },
 		{ name: "Hoàng Đức", url: "/assets/person/avt-03.jpg" },
 		{ name: "Trương Thủy", url: "/assets/person/avt-02.jpg" },
 		{ name: "Minh Thư", url: "/assets/person/avt-01.jpg" },
-		{ name: "Thu Thảo", url: "/assets/person/avt-06.jpg" },
-		{ name: "Thúy Ngân", url: "/assets/person/avt-05.jpg" },
-		{ name: "Ngọc Diễm", url: "/assets/person/avt-04.jpg" },
+		{ name: "Van Hung", url: "/assets/person/avt-06.jpg" },
+		{ name: "Pham pham", url: "/assets/person/avt-05.jpg" },
+		{ name: "Hoang Nam", url: "/assets/person/avt-04.jpg" },
 		{ name: "Hoàng Đức", url: "/assets/person/avt-03.jpg" },
 		{ name: "Trương Thủy", url: "/assets/person/avt-02.jpg" },
 		{ name: "Minh Thư", url: "/assets/person/avt-01.jpg" },
@@ -51,7 +51,7 @@ export default function Rightbar(props) {
 							<div className="friendReq">
 								<img src="/assets/person/avt-04.jpg" alt="avt-user" className="avt-user" />
 								<div>
-									<p className="friend-name">Thúy Ngân</p>
+									<p className="friend-name">Pham pham</p>
 									<div className="btnCtrl">
 										<button className="acceptBtn">Xác nhận</button>
 										<button className="cancelBtn">Xóa</button>

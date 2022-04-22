@@ -13,6 +13,7 @@ export default function Home() {
 					<Newfeed />
 				</div>
 				<Rightbar />
+				
 			</div>
 		</div>
 	)

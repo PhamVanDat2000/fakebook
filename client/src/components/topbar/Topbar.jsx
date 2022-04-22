@@ -5,8 +5,11 @@ import {TiGroup} from "react-icons/ti"
 import { IoMdNotifications } from "react-icons/io";
 import { IoPersonAdd } from "react-icons/io5";
 import {BsFillChatDotsFill, BsFillCaretDownFill} from "react-icons/bs"
+import { useSelector } from "react-redux";
 
 export default function Topbar() {
+	const userInfo = useSelector(state=>state.login)
+	console.log("aaaaaaaaaaaaa",userInfo.imageUrl)
     return (
         <div className="topbarContainer">
             <div className="topbarLeft">
@@ -25,8 +28,8 @@ export default function Topbar() {
             </div>
             <div className="topbarRight">
                 <div className="topbarAvata">
-                    <img src="/assets/person/avt-01.jpg" alt="avata user" className="avt-topbar" />
-                    <span className="name-user">Phạm Văn Đạt</span>
+                    <img src={userInfo.imageUrl} alt="avata user" className="avt-topbar" />
+                    <span className="name-user">{userInfo.name}</span>
                 </div>
                 <div className="topbarIconItem">
                     <IoPersonAdd className="topbarIcon-2" />
