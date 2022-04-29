@@ -2,8 +2,10 @@ import Topbar from "../../components/topbar/Topbar";
 import Newfeed from "../../components/newfeed/Newfeed"
 import "./profile.css";
 import Rightbar from "../../components/rightbar/Rightbar";
+import { useSelector } from "react-redux";
 
 export default function Profile() {
+	const userInfo = useSelector(state => state.login)
 	return (
 		<div className="container">
 			<Topbar />
@@ -11,11 +13,11 @@ export default function Profile() {
 				<div className="topProfile">
 					<div className="subTopProflie">
 						<div className="containCoverImg">
-							<img src="assets/coverImgProfile.jpg" alt="cover Img" className="coverImg" />
+							<img src={userInfo.imageUrl} alt="cover Img" className="coverImg" />
 						</div>
 						<div className="bottomCoverImg">
 							<div className="avataProfile">
-								<img src="assets/avtProfile.jpg" alt="cover Img" className="avataProfileImg" />
+								<img src={userInfo.imageUrl} alt="cover Img" className="avataProfileImg" />
 							</div>
 							<p>Phạm Văn Đạt</p>
 						</div>
@@ -36,7 +38,7 @@ export default function Profile() {
 								<p>Sống tại Thành Phố Hồ Chí Minh</p>
 								<p>Đến từ Hà Tĩnh</p>
 							</div>
-							<Rightbar user="true"/>
+							<Rightbar user="true" />
 						</div>
 						<div className="profileNewfeed">
 							<Newfeed />

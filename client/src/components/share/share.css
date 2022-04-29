@@ -14,6 +14,7 @@
 .inputShare {
   display: flex;
   align-items: center;
+	margin-bottom: 10px;
 }
 
 .textShare {
@@ -22,6 +23,7 @@
   border: none;
   background-color: #f0f2f5;
   padding-left: 16px;
+	padding-top: 8px;
 	flex-grow: 1;
   font-size: 13px;
 	font-weight: 400;
@@ -34,7 +36,7 @@
 .mediaShare {
   display: flex;
   align-items: center;
-  margin-top: 16px;
+  margin-top: 10px;
   justify-content: space-around;
 }
 
@@ -69,4 +71,22 @@
   color: #f7b928;
   font-size: 20px;
   margin-right:16px;
+}
+.image-item{
+	position: relative;
+	justify-content: center;
+}
+.image-item img{
+	border-radius: 6px;
+}
+.btnDelImg{
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	width: 30px;
+	height: 30px;
+	font-size: 28px;
+	border-radius: 50%;
+	border: none;
+	cursor: pointer;
 }

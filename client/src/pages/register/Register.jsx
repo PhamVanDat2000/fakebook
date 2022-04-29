@@ -4,27 +4,36 @@ import FacebookLogin from 'react-facebook-login';
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { loginSuccess } from "../../reducers/loginReducer";
+import { useState } from "react";
+import registerApi from "../../api/registerApi";
 export default function Register(props) {
 	const dispatch = useDispatch()
 	const navigate = useNavigate()
 
 	const responseGoogle = (response) => {
-		console.log("goole responds" ,response);
-		console.log("accccccccccc",response.profileObj)
 		dispatch(loginSuccess({
-			type:"google",
-			email:response.profileObj.email,
-			name:response.profileObj.name,
-			imageUrl:response.profileObj.imageUrl
+			type: "google",
+			email: response.profileObj.email,
+			name: response.profileObj.name,
+			imageUrl: response.profileObj.imageUrl
 		}))
 		navigate("/")
 	}
-	// const responseFacebook = (response) => {
-	// 	console.log("facebook responde",response);
-	// 	navigate("/")
-	// }
-	const componentClicked = () => {
-		console.log("clicked")
+	const [infoRegister, setInfoRegister] = useState({ firstname: "", lastname: "", email: "", password: "" })
+	console.log("thong tin dăng ky", infoRegister)
+
+	const handleSubmit = async () => {
+		try {
+			const data = {
+				username: infoRegister.firstname + " " + infoRegister.lastname,
+				email: infoRegister.email,
+				password: infoRegister.password
+			}
+			const response =await registerApi.postRegister(data)
+			console.log('register success', response)
+		} catch (error) {
+			console.log("register failure", error)
+		}
 	}
 	return (
 		<div className='registerForm'>
@@ -35,10 +44,10 @@ export default function Register(props) {
 			<p className="subheader">Nhanh chóng và dễ dàng</p>
 			<hr className="sidebarHr" />
 			<div className="nameField">
-				<input type="text" placeholder='First Name' className="firstName" />
-				<input type="text" placeholder='Last Name' className="lastName" />
+				<input type="text" placeholder='First Name' className="firstName" onChange={(e) => { setInfoRegister({ ...infoRegister, firstname: e.target.value }) }} />
+				<input type="text" placeholder='Last Name' className="lastName" onChange={(e) => { setInfoRegister({ ...infoRegister, lastname: e.target.value }) }} />
 			</div>
-			<input type="text" placeholder='Email' className="email" />
+			<input type="text" placeholder='Email' className="email" onChange={(e) => { setInfoRegister({ ...infoRegister, email: e.target.value }) }} />
 			<input type="text" placeholder='Mật khẩu' className="password" />
 			<label id="date_of_birth">Date of Birth:<br />
 			</label>
@@ -195,7 +204,7 @@ export default function Register(props) {
 					<input type="radio" name="gender" id='custome' />
 				</label>
 			</div>
-			<button className="SignUpBtn">
+			<button className="SignUpBtn" onClick={() => { handleSubmit() }}>
 				Đăng ký
 			</button>
 			<hr className="sidebarHr" />
@@ -203,22 +212,13 @@ export default function Register(props) {
 			<div className="SignInWithOther">
 				<GoogleLogin
 					className="btnGoogle"
-					clientId="626107235060-kp3ehse3dseiprr0fpd13qi0dkh1gdfk.apps.googleusercontent.com"
+					clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
 					buttonText="Login with Google"
 					onSuccess={responseGoogle}
 					onFailure={responseGoogle}
 					cookiePolicy={'single_host_origin'}
 					isSignedIn={true}
 				/>
-
-				{/* <FacebookLogin
-					appId="3085248048407445"
-					autoLoad={true}
-					fields="name,email,picture"
-					callback={responseFacebook}
-					cssClass="my-facebook-button-class"
-					icon="fa-facebook"
-				/> */}
 			</div>
 		</div>
 	)

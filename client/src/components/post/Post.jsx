@@ -1,5 +1,4 @@
 import { AiFillLike, AiOutlineLike } from 'react-icons/ai';
-import { GoSmiley } from 'react-icons/go';
 import { RiShareForwardLine } from 'react-icons/ri';
 import { BiCommentDetail } from 'react-icons/bi';
 import './post.css';
@@ -13,11 +12,11 @@ export default function Post() {
 				<div className="topPost">
 					<img src="assets/person/avt-05.jpg" alt="avt user" className='avt-user' />
 					<span className='nameUser'>
-						<span className='textName'>Thúy diễm</span>
+						<span className='textName'>Pham Dat</span>
 						<span className='textTime'>4 giờ</span>
 					</span>
 				</div>
-				<p className="statusText">Cuội suy tư</p>
+				<p className="statusText">heloooo</p>
 				<img src="assets/post-01.jpg" alt="" className='postImg' />
 				<div className="bottomPost">
 					<div className='inforReact'>
